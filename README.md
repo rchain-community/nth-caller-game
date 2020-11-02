@@ -10,7 +10,7 @@ It's ~~nice~~ necessary to know what you're building before you start building i
 
 1. Install RNode ([instructions](https://blog.rchain.coop/?s=install+rnode)) (I owe you better instructions)
 2. Install node.js and npm ([instructions](https://nodejs.org/en/))
-3. Clone the repository `git clone https://github.com/JoshOrndorff/nth-caller-game`
+3. Clone the repository `git clone https://github.com/rchain-community/nth-caller-game`
 4. Change into the project directory `cd nth-caller-game`
 5. Install dependencies `npm install`
 6. Start a fresh, pre-configured RNode `freshr`
@@ -40,7 +40,7 @@ This tutorial is written to build the project completely from scratch. All you n
 
 For those who prefer to have the starter code already in place, you can grab it from github.
 ```
-git clone https://github.com/JoshOrndorff/nth-caller-game
+git clone https://github.com/rchain-community/nth-caller-game
 cd nth-caller-game
 git checkout starter
 ```
@@ -230,7 +230,7 @@ The actual event handler does as its comments say. It first ensures that neither
 
 ## Connecting the UI to the blockchain
 
-We now have a _beautiful_ front end that makes http POST requests, and a running RNode that speaks gRPC. We'll glue them together using an express.js web server. Again, you can take a [crash course](https://www.youtube.com/watch?v=gnsO8-xJ8rs) or just copy-paste the code I've prepared. We'll also be using the [RChain-API node module](https://github.com/joshorndorff/RChain-API). Big thanks to Dan Connolly.
+We now have a _beautiful_ front end that makes http POST requests, and a running RNode that speaks gRPC. We'll glue them together using an express.js web server. Again, you can take a [crash course](https://www.youtube.com/watch?v=gnsO8-xJ8rs) or just copy-paste the code I've prepared. We'll also be using the [RChain-API node module](https://github.com/rchain-community/RChain-API). Big thanks to Dan Connolly.
 
 ```javascript
 "use strict"
@@ -288,7 +288,7 @@ When the server receive a registration message from the browser, it generates th
 
 To make this all work we need to install the necessary node modules and start the express server that we just wrote.
 ```
-$ npm install --save body-parser express grpc github:JoshOrndorff/RChain-API
+$ npm install --save body-parser express grpc github:rchain-community/RChain-API
 $ node server.js
 ```
 
@@ -407,10 +407,10 @@ Pro tip: This dapp will leave games registered in the blockchain between runs, a
 At this point you've got a working dapp that implements all features of the nth caller game. Congratulations! But a good piece of software is never complete right? Here are a few things you can do to make this dapp even nicer.
 
 **Facelift**
-For one thing, our UI looks straight out of 1997. A little styling would go a long way. All it takes is adding the line `<link type="text/css" rel="stylesheet" href="page.css" />` to the head of your `index.html` file, and downloading [page.css](https://github.com/JoshOrndorff/nth-caller-game/blob/master/page.css). (sorry, that link is dead. I owe you css.)
+For one thing, our UI looks straight out of 1997. A little styling would go a long way. All it takes is adding the line `<link type="text/css" rel="stylesheet" href="page.css" />` to the head of your `index.html` file, and downloading [page.css](https://github.com/rchain-community/nth-caller-game/blob/master/page.css). (sorry, that link is dead. I owe you css.)
 
 **NPM Scripts**
-If you built from scratch, you may be wondering how to get those nice npm scripts. All it takes is saving [my .rnode directory](https://github.com/JoshOrndorff/nth-caller-game/tree/master/.rnode), and adding the scripts to your `package.json` file.
+If you built from scratch, you may be wondering how to get those nice npm scripts. All it takes is saving [my .rnode directory](https://github.com/rchain-communityrndorff/nth-caller-game/tree/master/.rnode), and adding the scripts to your `package.json` file.
 
 ```javascript
 "scripts": {
