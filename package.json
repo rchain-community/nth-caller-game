@@ -26,6 +26,6 @@
     "express": "^4.16.3",
     "grpc": "^1.14.1",
     "rchain-api": "github:rchain-community/RChain-API",
-    "freshr": "^0.2.0"
+    "freshr": "^0.3.1"
   }
 }
